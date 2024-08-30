@@ -1,5 +1,5 @@
 import exp from "constants";
-import type { Component,Ref } from "vue";
+import { type Component, type ComputedRef, type Ref } from "vue";
 export type ButtonType="primary"|"success"|"warning"|"danger"|"info";
 export type NativeType="button"|"reset"|"submit";
 export type ButtonSize="large"|"default"|"small";
@@ -39,3 +39,9 @@ export interface ButtonInstance{
     ref: Ref<HTMLButtonElement|void>;
 }
 //暴露的实例化组件
+export interface ButtonInstance {
+    ref: Ref<HTMLButtonElement | void>;
+    disabled: ComputedRef<boolean>;
+    size: ComputedRef<string>;
+    type: ComputedRef<string>;
+  }

@@ -25,8 +25,11 @@ const handleBtnClick=(e:MouseEvent)=>emits("click",e);//点击事件监听
 const handleBtnClickThrottle=throttle(handleBtnClick,props.throttleDuration);//节流版本的点击
 //一个响应式的引用存储按钮对于dom元素的引用
 defineExpose<ButtonInstance>({
-    ref:_ref,
-})
+  ref: _ref,
+  disabled,
+  size,
+  type,
+});
 </script>
 <template>
    <component

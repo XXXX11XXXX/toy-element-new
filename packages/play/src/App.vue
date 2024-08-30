@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<er-button type="primary" size="small">
+<er-button type="success" size="small">
 test
 </er-button>
 </template>
